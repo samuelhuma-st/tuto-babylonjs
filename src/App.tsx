@@ -86,6 +86,9 @@ export const TranslateCamera = () => (
   </div>
 );
 
+let baseUrl =
+  "https://raw.githubusercontent.com/samuelhuma-st/tuto-babylonjs/master/public/";
+
 const App = () => (
   <div className="section">
     {/* <div className="text">
@@ -122,14 +125,10 @@ const App = () => (
             />
 
             <Model
-              rootUrl="/public/"
+              rootUrl={`${baseUrl}`}
               sceneFilename="book.gltf"
               name={"book"}
-              scaling={new Vector3(20, 20, 20)}
             />
-
-            
-
             <box name="box2" width={1} height={1} depth={1} />
           </Suspense>
         </Scene>
